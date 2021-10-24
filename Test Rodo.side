@@ -1,0 +1,143 @@
+{
+  "id": "2becc996-d95a-42b3-ae14-2e3deeb26da7",
+  "version": "2.0",
+  "name": "Test Rodo",
+  "url": "https://www.rodo.com",
+  "tests": [{
+    "id": "706633cb-5033-43fd-b887-7068e5fe7828",
+    "name": "Test01",
+    "commands": [{
+      "id": "4f5ac054-bbcc-4b89-8379-240217ce5357",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b9e4fe2-a9be-4587-9dbd-96649de0578b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "758x819",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d325e2ab-ddd9-4bfe-9501-1f89a35455d0",
+      "comment": "",
+      "command": "//store",
+      "target": "'Small SUV'",
+      "targets": [],
+      "value": "VehType"
+    }, {
+      "id": "67d88330-8b8d-42c3-aa81-361ffcd87261",
+      "comment": "",
+      "command": "//store",
+      "target": "5",
+      "targets": [],
+      "value": "nthValue"
+    }, {
+      "id": "9a8ac1c6-432a-4a38-b61d-98e49fd2e7bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vehicle_type_s_trigger",
+      "targets": [
+        ["css=.vehicle_type_s_trigger", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div[2]/div/div[2]/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "601069b7-0ab9-4c7a-9b84-14377e297a56",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//img[@alt='Small SUV']",
+      "targets": [
+        ["css=li:nth-child(9) > div > img", "css:finder"],
+        ["xpath=//img[@alt='Small SUV']", "xpath:img"],
+        ["xpath=//div[@id='__next']/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div/ul/li[9]/div/img", "xpath:idRelative"],
+        ["xpath=//li[9]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13ac3453-e23f-4520-b97d-d3aaa560dd8d",
+      "comment": "",
+      "command": "echo",
+      "target": "${VehType}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1b1fd26-5d3b-4a27-92b6-2ac7e9390702",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[@alt=${VehType}]",
+      "targets": [
+        ["css=li:nth-child(9) > div > img", "css:finder"],
+        ["xpath=//img[@alt='Small SUV']", "xpath:img"],
+        ["xpath=//div[@id='__next']/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div/ul/li[9]/div/img", "xpath:idRelative"],
+        ["xpath=//li[9]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee5261ed-7ea0-44ff-9b24-be8aa51d3949",
+      "comment": "",
+      "command": "echo",
+      "target": "${nthValue}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b24f01a1-cb46-4a93-806f-8d8a2d35d30d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[${nthValue}]/div/a",
+      "targets": [
+        ["css=.jsx-662647972:nth-child(5) .FullClickableTile", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div[3]/div/div/div/ul[2]/li[5]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/sign-up')])[6]", "xpath:href"],
+        ["xpath=//li[5]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aac7909-6a64-43eb-a6e5-66b6fdd49bb9",
+      "comment": "",
+      "command": "echo",
+      "target": "***Test Complete***",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0ddad7c4-1eb9-441d-909b-353585246220",
+    "name": "Run Test",
+    "commands": [{
+      "id": "4a62f6fa-b369-46b2-a12e-03464939c335",
+      "comment": "",
+      "command": "store",
+      "target": "'Small SUV'",
+      "targets": [],
+      "value": "VehType"
+    }, {
+      "id": "29732200-cbfb-4d72-903e-1fb4d45da9fc",
+      "comment": "",
+      "command": "store",
+      "target": "5",
+      "targets": [],
+      "value": "nthValue"
+    }, {
+      "id": "04db5fc9-d4ac-4a17-847b-b17c99222876",
+      "comment": "",
+      "command": "run",
+      "target": "Test01",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e4d57a54-ff83-4ea8-8c07-0dd632bafb26",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["706633cb-5033-43fd-b887-7068e5fe7828"]
+  }],
+  "urls": ["https://www.rodo.com/"],
+  "plugins": []
+}
